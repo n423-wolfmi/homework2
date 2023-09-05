@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 2</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="shortcut icon" href="#">
+</head>
+<body>
+    <div class="banner">
+        <div class="title">WEATHER API</div>
+        <div class="navbar"></div>
+    </div>
+
+    <div class="split">
+        <div class="left">
+            <div class="form">
+                <h2>Find Weather Forecast</h2>
+                <p class="error"></p>
+                <div class="location">
+                    <input type="text" id="city" placeholder="City Name">
+                    <p>OR</p>
+                    <input type="number" id="zip" placeholder="Zipcode">
+                </div>
+                <input type="number" id="forecast" placeholder="# of Forecast Days">
+                <input type="submit" id="submit" value="Get Weather">
+            </div>
+        </div>
+        <div class="right">
+            <div class="results"></div>
+        </div>
+    </div>
+    
+    <script src="lib/jquery-3.7.1.js"></script>
+    <script src="app/app.js"></script>
+</body>
+</html>

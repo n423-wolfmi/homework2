@@ -1,0 +1,86 @@
+.results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 50px;
+
+    .location {
+        background-color: #EDF0F5;
+        padding: 20px;
+        border-radius: 10px;
+        min-width: 333px;
+        width: 80%;
+        box-shadow:  5px 10px 8px #313131;
+        margin-bottom: 50px;
+        position: relative;
+        
+        h2 {
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 17px;
+        }
+
+        p {
+            margin-top: 5px;
+        }
+
+        .locationInfo {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .locationLeft {
+                width: 50%;
+            }
+
+            .locationRight {
+                width: 50%;
+
+                img {
+                    position: absolute;
+                    top: 0;
+                    right: 3%;
+                }
+            }
+        }
+        
+    }
+
+    .forecast {
+        background-color: #EDF0F5;
+        padding: 20px;
+        border-radius: 10px;
+        width: 80%;
+        box-shadow:  5px 10px 8px #313131;
+
+        h2 {
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 25px;
+        }
+
+        p {
+            margin-top: 5px;
+        }
+
+        .forecastList {
+            display: flex;
+            flex-direction: column;
+            // align-items: center;
+            // justify-content: space-evenly;
+            
+            .forecastDay {
+                background-color: #EDF0F5;
+                padding: 20px;
+                border: 1px solid #000;
+                border-radius: 5px;
+                box-shadow:  5px 10px 8px #313131;
+        
+                p {
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}
