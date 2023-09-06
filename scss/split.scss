@@ -5,6 +5,7 @@
 
     .left {
         width: 50%;
+        height: 100%;
         background-color: #3665ab;
         position: relative;
         border-right: 1px solid #EDF0F5;
@@ -12,7 +13,14 @@
 
     .right {
         width: 50%;
+        height: 100%;
         background-color: #3665ab;
         border-left: 1px solid #EDF0F5;
+        padding: 50px 0;
+        overflow-y: scroll;
     }
+}
+
+@media screen and (max-width: 0px) {
+    
 }

@@ -83,10 +83,27 @@ function initListeners() {
                         </div>
                     `)
                     $.each(days, (idx, day) => {
-                        $(".forecast").append(`
+                        $(".forecastList").append(`
                             <div class="forecastDay">
-                                <p><b>Date:</b> ${day.date}</p>
-                                <p><b>Max Temps:</b> ${day.day.maxtemp_f}&deg;F & ${day.day.maxtemp_c}&deg;C</p>
+                                <h3>${day.date} | ${day.day.condition.text}</h3>
+                                <div class="forecastInfo">
+                                    <div>
+                                        <p>
+                                            <img src="${day.day.condition.icon}" alt="condition"
+                                        </p>
+                                        <p><b>Max Temps:</b> ${day.day.maxtemp_f}&deg;F & ${day.day.maxtemp_c}&deg;C</p>
+                                        <p><b>Min Temps:</b> ${day.day.mintemp_f}&deg;F & ${day.day.mintemp_c}&deg;C</p>
+                                        <p><b>Avg Temps:</b> ${day.day.avgtemp_f}&deg;F & ${day.day.avgtemp_c}&deg;C</p>
+                                        <p><b>Max Wind Speed:</b> ${day.day.maxwind_mph}MPH & ${day.day.maxwind_kph}KPH</p>
+                                    </div>
+                                    <div>
+                                        
+                                        <p><b>Chance of Rain:</b> ${day.day.daily_chance_of_rain}%</p>
+                                        <p><b>Chance of Snow:</b> ${day.day.daily_chance_of_snow}%</p>
+                                        <p><b>Sunrise:</b> ${day.astro.sunrise}</p>
+                                        <p><b>Sunset:</b> ${day.astro.sunset}</p>
+                                    </div>
+                                </div>
                             </div>
                         `)
                     })

@@ -3,7 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    margin-top: 50px;
 
     .location {
         background-color: #EDF0F5;
@@ -17,8 +16,9 @@
         
         h2 {
             border-bottom: 2px solid #000;
-            padding-bottom: 5px;
+            padding-bottom: 12px;
             margin-bottom: 17px;
+            display: inline-block;
         }
 
         p {
@@ -39,12 +39,11 @@
 
                 img {
                     position: absolute;
-                    top: 0;
-                    right: 3%;
+                    top: 1%;
+                    right: 1%;
                 }
             }
-        }
-        
+        }  
     }
 
     .forecast {
@@ -58,6 +57,15 @@
             border-bottom: 2px solid #000;
             padding-bottom: 5px;
             margin-bottom: 25px;
+            display: inline-block;
+        }
+
+        h3 {
+            border-bottom: 2px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 10px;
+
+            display: inline-block;
         }
 
         p {
@@ -67,18 +75,33 @@
         .forecastList {
             display: flex;
             flex-direction: column;
-            // align-items: center;
-            // justify-content: space-evenly;
+            justify-content: space-evenly;
             
             .forecastDay {
                 background-color: #EDF0F5;
                 padding: 20px;
                 border: 1px solid #000;
                 border-radius: 5px;
-                box-shadow:  5px 10px 8px #313131;
+                box-shadow:  2px 2px 10px #313131;
+                margin-bottom: 25px;
+                position: relative;
         
                 p {
                     margin-top: 5px;
+
+                    img {
+                        position: absolute;
+                        top: 1%;
+                        right: 1%;
+                    }
+                }
+
+                .forecastInfo {
+                    display: flex;
+
+                    div {
+                        margin-right: 35px;
+                    }
                 }
             }
         }
