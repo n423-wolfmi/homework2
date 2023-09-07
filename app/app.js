@@ -90,7 +90,7 @@ function initListeners() {
         if(zip != "") {
             let zipURL = `${baseurl}${apikey}&q=${zip}&days=${forecast}&aqi=no&alerts=no`
 
-            $.getJSON(cityURL, (data) => {
+            $.getJSON(zipURL, (data) => {
                 console.log("city URL", data)
                 $(".results").html(`
                     <div class="location">
