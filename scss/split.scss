@@ -21,6 +21,18 @@
     }
 }
 
-@media screen and (max-width: 0px) {
-    
+@media screen and (max-width: 1058px) {
+    .split {
+        flex-direction: column;
+
+        .left {
+            border-bottom: 1px solid #EDF0F5;
+            width: 100%;
+        }
+
+        .right {
+            border-top: 1px solid #EDF0F5;
+            width: 100%;
+        }
+    }
 }

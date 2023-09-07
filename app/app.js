@@ -24,7 +24,10 @@ function initListeners() {
                 console.log("city URL", data)
                 $(".results").html(`
                     <div class="location">
-                        <h2>Location Information</h2>
+                        <div class="cardHeader">
+                            <h2>Location Information</h2>
+                            <img src="${data.current.condition.icon}" alt="cond">
+                        </div>
                         <div class="locationInfo">
                             <div class="locationLeft">
                                 <p><b>Name:</b> ${data.location.name}</p>
@@ -34,8 +37,7 @@ function initListeners() {
                             </div>
                             <div class="locationRight">
                                 <p><b>Condition:</b> 
-                                    ${data.current.condition.text} 
-                                    <img src="${data.current.condition.icon}" alt="cond">
+                                    ${data.current.condition.text}
                                 </p>
                                 <p><b>Temperature (F&deg;):</b> 
                                     ${data.current.temp_f}&deg; but feels like ${data.current.feelslike_f}&deg;
@@ -50,27 +52,26 @@ function initListeners() {
                 if(forecast != 0) {
                     let days = data.forecast.forecastday
                     $(".results").append(`
-                        <div class="forecast">
-                            <h2>Forecast</h2>
-                            <div class="forecastList"></div>
-                        </div>
+                    <div class="forecast">
+                        <h2>Forecast</h2>
+                        <div class="forecastList"></div>
+                    </div>
                     `)
                     $.each(days, (idx, day) => {
                         $(".forecastList").append(`
                             <div class="forecastDay">
-                                <h3>${day.date} | ${day.day.condition.text}</h3>
+                                <div class="cardHeader">
+                                    <h3>${day.date} | ${day.day.condition.text}</h3>
+                                    <img src="${day.day.condition.icon}" alt="condition">      
+                                </div>
                                 <div class="forecastInfo">
-                                    <div>
-                                        <p>
-                                            <img src="${day.day.condition.icon}" alt="condition"
-                                        </p>
+                                    <div class="forecastLeft">
                                         <p><b>Max Temps:</b> ${day.day.maxtemp_f}&deg;F & ${day.day.maxtemp_c}&deg;C</p>
                                         <p><b>Min Temps:</b> ${day.day.mintemp_f}&deg;F & ${day.day.mintemp_c}&deg;C</p>
                                         <p><b>Avg Temps:</b> ${day.day.avgtemp_f}&deg;F & ${day.day.avgtemp_c}&deg;C</p>
                                         <p><b>Max Wind Speed:</b> ${day.day.maxwind_mph}MPH & ${day.day.maxwind_kph}KPH</p>
                                     </div>
-                                    <div>
-                                        
+                                    <div class="forecastRight">  
                                         <p><b>Chance of Rain:</b> ${day.day.daily_chance_of_rain}%</p>
                                         <p><b>Chance of Snow:</b> ${day.day.daily_chance_of_snow}%</p>
                                         <p><b>Sunrise:</b> ${day.astro.sunrise}</p>
