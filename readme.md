@@ -2,7 +2,7 @@
 
 Authors: Matthew Wolf, IUPUI, N423 Fall 2023
 
-Web4 Link: https://in-info-web4.informatics.iupui.edu/~wolfmi/n423/homework2
+[Web4 Link](https://in-info-web4.informatics.iupui.edu/~wolfmi/n423/homework2)
 
 ## Assignment Info
 
